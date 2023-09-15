@@ -1,151 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bratz Magazine</title>
-  <link rel="stylesheet" href="/style.e308ff8e.css">
-  <style>body {
-      background-color: purple;
-      color: #000000;
-      font-family: 'Courier New', monospace;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bratz Magazine</title>
+    <style>body {
+            background-color: #FF66CC; /* Bratz Pink */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
 
-    p {
-      margin: 10px 0;
-      color: black;
+        #desktop {
+            background-color: #8B008B; /* Purple */
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 20px;
+        }
 
-    }
+        #menu-bar {
+            width: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            padding: 5px 0;
+        }
 
-    header {
-      text-align: center;
-      background-color: #7A52A0;
-      padding: 20px;
-    }
+        .menu-item {
+            color: #FFF;
+            margin: 0 10px;
+            cursor: pointer;
+        }
 
-    header img {
-      width: 80px;
-      height: 80px;
-    }
+        #content {
+            flex-grow: 1;
+            width: 80%;
+            background-color: #FFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            overflow: auto;
+        }
 
-    h1 {
-      font-size: 36px;
-      margin: 10px 0;
-      color: white;
-    }
+        #footer {
+            width: 100%;
+            background-color: #000;
+            color: #FFF;
+            text-align: center;
+            padding: 10px 0;
+        }
 
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      text-align: center;
-    }
+        /* Desktop Icons */
+        .desktop-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
 
-    nav li {
-      display: inline;
-      margin-right: 20px;
-    }
+        .desktop-icon a {
+            text-decoration: none;
+            color: #8B008B; /* Purple */
+            font-weight: bold;
+            margin-top: 5px;
+        }
 
-    nav a {
-      text-decoration: none;
-      color: #00CED1;
-    }
+        .desktop-icon img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
 
-    main {
-      padding: 20px;
-    }
-
-    section {
-      margin-bottom: 40px;
-      padding: 20px;
-      background-color: white;
-      border: 1px solid #7A52A0;
-    }
-
-    h2 {
-      font-size: 24px;
-      margin-top: 0;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.5;
-
-    }
-
-    button {
-      display: block;
-      margin: 20px auto;
-      padding: 10px 20px;
-      background-color: #7A52A0;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #7A52A0;
-      padding: 10px;
-    }</style>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<script src="/style.e308ff8e.js"></script></head>
+        /* Change Background Button */
+        #change-bg-button {
+            background-color: #8B008B; /* Purple */
+            color: #FFF;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 20px;
+        }</style>
+</head>
 <body>
-  <header>
-    <img src="" alt="Bratz Logo">
-    <h1>Welcome to Bratz Magazine</h1>
-    <p>We are the girls with a passion for fashion</p>
-  </header>
+    <div id="desktop">
+        <div id="menu-bar">
+            <div class="menu-item">File</div>
+            <div class="menu-item">Edit</div>
+            <div class="menu-item">View</div>
+            <div class="menu-item">Help</div>
+        </div>
+        <div id="content">
+            <h1>Welcome to Bratz Magazine</h1>
+            <p>Your source for all things Bratz!</p>
+            <!-- Add Bratz-related content here -->
+        </div>
+        <div class="desktop-icon">
+            <a href="#">Bratz News</a>
+            <img src="" alt="Bratz News Icon">
+        </div>
+        <div class="desktop-icon">
+            <a href="#">Fashion Trends</a>
+            <img src="" alt="Fashion Trends Icon">
+        </div>
+        <!-- Add more icons as needed -->
 
-  <nav>
-    <ul>
-      <li><a href="#fashion">Fashion</a></li>
-      <li><a href="#beauty">Beauty</a></li>
-      <li><a href="#lifestyle">Lifestyle</a></li>
-    </ul>
-  </nav>
+        <!-- Change Background Button -->
+        <button id="change-bg-button">Change Background</button>
 
-  <main>
-    <section id="fashion">
-      <h2>Dear Chloe</h2>
-      <img src="/bratzSign.627df66d.jpg" alt="Fashion Trends">
-      <p>Chloe is here to give you advice and help you with your everyday problems</p>
-      <p></p>
-    </section>
-
-    <section id="BratzFashion">
-      <h2>Fashion Emergency with Jade</h2>
-      <img src="/bratzFashion.9e6b870b.jpg" alt="Fashion Trends">
-      <p>Get the hottest fashion tips and trends straight from our Fashion experts.</p>
-      <p></p>
-    </section>
-
-    <section id="bratzMusic">
-      <h2>Music with Sasha</h2>
-      <img src="/bratzMusic.8b8ac6bd.jpg" alt="Fashion Trends">
-      <p>Hear our music experts opinion.</p>
-      <p></p>
-    </section>
-
-    <section id="bratzYoga">
-      <h2>Lifestyle with Sasha</h2>
-      <img src="/bratzYoga.238b1613.jpg" alt="Fashion Trends">
-      <p>Yasmin looks into fitness and beauty.</p>
-      <p></p>
-    </section>
-
-    
-
-  <button id="nextSection">Next Section</button>
-
-  <footer>
-    <p>&copy; Made by Eliza Fury</p>
-  </footer>
-
-  <script src="/main.1f19ae8e.js"></script>
-</main></body>
+        <div id="footer">
+            &copy; 2023 Bratz Magazine
+        </div>
+    </div>
+</body>
 </html>
