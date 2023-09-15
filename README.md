@@ -1,0 +1,2 @@
+# bratzMag
+A JavaScript project
