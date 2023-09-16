@@ -12,6 +12,18 @@
             overflow: hidden;
         }
 
+        .draggable {
+            width: 300px;
+            height: 200px;
+            background-color: #8A2BE2; /* Purple background */
+            color: #FFF; /* White text color */
+            text-align: center;
+            cursor: grab; /* Change cursor type */
+            position: absolute;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow */
+        }
+
         #desktop {
             background-color: #725f6a; /* Purple */
             width: 100%;
@@ -144,9 +156,11 @@
             <a href="#">Bratz News</a>
             <img src="" alt="Bratz News Icon">
         </div>
-        <div class="desktop-icon">
-            <a href="#">Fashion Trends</a>
-            <img src="" alt="Fashion Trends Icon">
+        <div id="draggable-block" class="draggable">
+            <div class="desktop-icon">
+                <a href="#">Fashion Trends</a>
+                <img src="" alt="Fashion Trends Icon">
+            </div>
         </div>
         <!-- Add more icons as needed -->
 
@@ -157,5 +171,64 @@
             &copy; 2023 Bratz Magazine
         </div>
     </div>
+    <script>
+        const draggableBlock = document.getElementById('draggable-block');
+
+        let isDragging = false; // Initialize a flag to track if the block is being dragged.
+        let offsetX, offsetY; // Initialize variables to store the initial click position relative to the block.
+
+        // Event listener for mouse click on the block.
+        draggableBlock.addEventListener('mousedown', (e) => {
+            if (isDragging) {
+                // If the block is already being dragged, release it and reset the cursor.
+                document.body.style.cursor = 'auto'; // Restore default cursor
+                isDragging = false;
+                return;
+            }
+
+            // Calculate the initial click position relative to the block's top-left corner.
+            // This relates to how it drags
+            offsetX = e.clientX - draggableBlock.getBoundingClientRect().left;
+            offsetY = e.clientY - draggableBlock.getBoundingClientRect().top;
+
+            draggableBlock.style.transition = 'none'; // Disable transition effects temporarily. //Removing this causes bugs
+            draggableBlock.style.cursor = 'grabbing'; // Change cursor type when dragging.
+            isDragging = true; // Set the dragging flag to true.
+        });
+
+        // Event listener for mouse movement while dragging.
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return; // Return if the block is not being dragged.
+
+            // Calculating the position of the mouse movement.
+            const x = e.clientX - offsetX; 
+            const y = e.clientY - offsetY;
+
+            draggableBlock.style.transform = `translate(${x}px, ${y}px)`; // Need this to move block
+            document.body.style.cursor = 'grabbing'; // Change cursor type to 'grabbing'.
+        });
+
+        // Event listener for mouse button release.
+        document.addEventListener('mouseup', (e) => {
+            // If clicked when dragging allows user to release
+            if (isDragging) {
+                // If the mouse button is released while dragging, stop dragging.
+                //draggableBlock.style.transition = 'transform 0.3s ease-in-out'; // Restore transition. Unsure if needed 
+                document.body.style.cursor = 'auto'; // Restore default cursor.
+                isDragging = false; // Set the dragging flag to false.
+            }
+        });
+
+        // Event listener for mouse leaving the document while dragging.
+        document.addEventListener('mouseleave', () => {
+            if (isDragging) {
+                // If the mouse leaves the document while dragging, stop dragging.
+                //draggableBlock.style.transition = 'transform 0.3s ease-in-out'; // Restore transition.
+                document.body.style.cursor = 'auto'; // Restore default cursor.
+                isDragging = false; // Set the dragging flag to false.
+            }
+        });
+
+    </script>
 </body>
 </html>
