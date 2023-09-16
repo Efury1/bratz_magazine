@@ -5,11 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bratz Magazine</title>
     <style>body {
-            background-color: #FF66CC; /* Bratz Pink */
+            background-color: #725f6a; /* Bratz Pink */
             font-family: Arial, sans-serif;
             margin: 0;
             overflow: hidden;
+            overflow-y: auto; /* Enable vertical scrolling */
+            text-align: right;
+            padding: 20px;
+            height: 100vh;
         }
+
+        header {
+            text-align: right;
+            padding: 20px;
+            min-height: 25vh;
+        }
+
+        .header-content {
+            max-width: 80%;
+            margin: 0 auto;
+            color: white;
+            text-align: center;
+        }
+
         #welcome-section {
             text-align: center;
             padding: 40px; /* Add padding to create space around the text */
@@ -50,7 +68,6 @@
             color: #FFF; /* White text color */
             text-align: center;
             cursor: grab; /* Change cursor type */
-            user-drag: none; /* Disable native browser drag behavior */
             position: absolute;
             border-radius: 10px;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow */
@@ -81,6 +98,7 @@
             margin-top: 10px;
             font-size: 18px;
         }
+        
 
         #desktop {
             background-color: #725f6a; /* Purple */
@@ -143,7 +161,6 @@
 
         #footer {
             width: 100%;
-            background-color: #000;
             color: #FFF;
             text-align: center;
             padding: 10px 0;
@@ -183,6 +200,12 @@
 </head>
 <body>
     <div id="desktop">
+        <header>
+            <div class="header-content">
+                <h1>Bratz</h1>
+                <p>About Us</p>
+            </div>
+        </header>
      
         <div id="menu-bar">
             <div class="menu-item">File</div>
@@ -195,12 +218,14 @@
             </div>
             <div class="menu-item">Help</div>
         </div>
-   
+
+    
         <div id="welcome-section">
             <h1>Welcome to</h1>
             <h2>Bratz Magazine</h2>
             <p>Your source for all things Bratz!</p>
         </div>
+
         <div class="desktop-icon">
             <a href="#">Bratz News</a>
             <img src="/KylieBratz.5cbbe8d4.png" alt="Bratz News Icon">
@@ -221,7 +246,7 @@
         <button id="change-bg-button">Change Background</button>
 
         <div id="footer">
-            &copy; 2023 Bratz Magazine
+          
         </div>
     </div>
     <script>var draggableBlock = document.getElementById('draggable-block');
