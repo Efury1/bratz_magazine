@@ -12,14 +12,6 @@
             overflow: hidden;
         }
 
-        nav {
-          -webkit-flex: 1;
-          -ms-flex: 1;
-          flex: 1;
-          background: purple;
-          padding: 20px;
-        }
-
         #desktop {
             background-color: #725f6a; /* Purple */
             width: 100%;
@@ -33,6 +25,40 @@
 
         }
 
+        nav {
+          -webkit-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          background: purple;
+          padding: 20px;
+          overflow: hidden;
+        }
+
+        .menu-item {
+            color: #FFF;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #7d7c81;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content
+        {
+            display: block;
+        }
+
         #menu-bar {
             width: 100%;
             background-color: #7d7c81;
@@ -42,11 +68,6 @@
             border-radius: 10px;
         }
 
-        .menu-item {
-            color: #FFF;
-            margin: 0 10px;
-            cursor: pointer;
-        }
 
         #content {
             flex-grow: 1;
@@ -105,7 +126,12 @@
         <div id="menu-bar">
             <div class="menu-item">File</div>
             <div class="menu-item">Edit</div>
-            <div class="menu-item">View</div>
+            <div class="dropdown">View
+                <dic class="dropdown-content">
+                    <a href="">Hello</a>
+                </dic>
+
+            </div>
             <div class="menu-item">Help</div>
         </div>
    
