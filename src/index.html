@@ -11,6 +11,31 @@
             margin: 0;
             overflow: hidden;
         }
+        #welcome-section {
+            text-align: center;
+            padding: 40px; /* Add padding to create space around the text */
+            background-color: #FF66CC; /* Bratz Pink background for the section */
+            color: #FFF; /* White text color */
+            border-radius: 10px;
+        }
+
+        #welcome-section h1 {
+            font-size: 28px; /* Increase font size for "Welcome to" */
+            margin-bottom: 10px; /* Add some space below "Welcome to" */
+        }
+
+        #welcome-section h2 {
+            font-size: 36px; /* Increase font size for "Bratz Magazine" */
+            margin: 0; /* Remove default margins */
+            line-height: 1.2; /* Adjust line height for better spacing */
+        }
+
+        #welcome-section p {
+            font-size: 18px; /* Adjust font size for the description */
+            margin-top: 10px; /* Add space between the title and description */
+        }
+        /* ... (remaining CSS code) ... */
+
 
         #draggable-container {
             display: flex;
@@ -117,17 +142,6 @@
         }
 
 
-
-        #content {
-            flex-grow: 1;
-            width: 80%;
-            background-color: #FFF;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            overflow: auto;
-        }
-
         #footer {
             width: 100%;
             background-color: #000;
@@ -184,10 +198,10 @@
             <div class="menu-item">Help</div>
         </div>
    
-        <div id="content">
-            <h1>Welcome to Bratz Magazine</h1>
+        <div id="welcome-section">
+            <h1>Welcome to</h1>
+            <h2>Bratz Magazine</h2>
             <p>Your source for all things Bratz!</p>
-            <!-- Add Bratz-related content here -->
         </div>
         <div class="desktop-icon">
             <a href="#">Bratz News</a>
@@ -222,7 +236,7 @@
         draggableBlock.addEventListener('mousedown', (e) => {
             if (isDragging) {
                 // If the block is already being dragged, release it and reset the cursor.
-                draggableBlock.style.transition = 'transform 0.3s ease-in-out';
+                //draggableBlock.style.transition = 'transform 0.3s ease-in-out';
                 document.body.style.cursor = 'auto'; // Restore default cursor
                 isDragging = false;
                 return;
@@ -248,7 +262,7 @@
 
         document.addEventListener('mouseup', () => {
             if (isDragging) {
-                draggableBlock.style.transition = 'transform 0.3s ease-in-out';
+                //xdraggableBlock.style.transition = 'transform 0.3s ease-in-out';
                 document.body.style.cursor = 'auto';
                 isDragging = false;
             }
