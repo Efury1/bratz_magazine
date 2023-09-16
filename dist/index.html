@@ -31,9 +31,11 @@
         #welcome-section {
             text-align: center;
             padding: 40px; /* Add padding to create space around the text */
-            background-color: #FF66CC; /* Bratz Pink background for the section */
+            background-color: #725f6a; /* Bratz Pink background for the section */
             color: #FFF; /* White text color */
             border-radius: 10px;
+            max-width: 75%;
+            width: 100%;
         }
 
         #welcome-section h1 {
@@ -82,6 +84,40 @@
             color: #FFF;
             font-size: 18px;
             cursor: pointer;
+        }
+
+        .cd-button {
+            width: 110px;
+            height: 150px;
+            background-color: #8B008B; /* Purple */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position:sticky;
+            bottom: 20px;
+            right: 20px;
+            color: #FFF;
+            font-weight: bold;
+            font-size: 14px;  
+            padding: 10px 20px;
+            
+        }
+
+        /* Change Background Button */
+        #change-bg-button {
+            background-color: #8B008B; /* Purple */
+            color: #FFF;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 20px;
+        }
+
+        .cd-inner {
+            transform: rotate(45deg); /* Rotate the inner content to create the CD effect */
         }
 
         .popup-content {
@@ -147,6 +183,28 @@
             display: block;
         }
 
+        .dropdown ul {
+            list-style: none; /* Remove default list bullets */
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown ul li {
+            margin: 5px 0; /* Add spacing between list items */
+        }
+
+        .dropdown ul li a {
+            display: block; /* Make the entire list item clickable */
+            text-decoration: none;
+            color: #FFF;
+            padding: 5px 0; /* Add padding to make it visually appealing */
+            text-align: left;
+        }
+
+        .dropdown ul li a:hover {
+            background-color: purple; /* Highlight on hover */
+        }
+
         #menu-bar {
             width: 80%;
             background-color: #7d7c81;
@@ -182,20 +240,10 @@
         }
 
         .desktop-icon img {
-            width: 300px;
-            height: 300px;
+            width: 100%;
+            height: 500px;
             margin-bottom: 10px;
-        }
-
-        /* Change Background Button */
-        #change-bg-button {
-            background-color: #8B008B; /* Purple */
-            color: #FFF;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            margin: 20px;
+            border-radius: 10px;
         }</style>
 </head>
 <body>
@@ -211,15 +259,16 @@
             <div class="menu-item">File</div>
             <div class="menu-item">Edit</div>
             <div class="dropdown">View
-                <div class="dropdown-content">
-                    <a href="">Dear Chloe</a>
-                    <a href="">Fashion Emergency</a>
-                    <a href="">Music Spotlight</a>
-                    <a href="">Lifestyle</a>
-                </div>
+                <ul class="dropdown-content">
+                    <li><a href="">Dear Chloe</a></li>
+                    <li><a href="">Fashion Emergency</a></li>
+                    <li><a href="">Music Spotlight</a></li>
+                    <li><a href="">Lifestyle</a></li>
+                </ul>
             </div>
             <div class="menu-item">Help</div>
         </div>
+        
 
     
         <div id="welcome-section">
@@ -229,7 +278,8 @@
         </div>
 
         <div class="desktop-icon">
-            <a href="#">Bratz News</a>
+            <a href="#" style="font-size: 24px; color: white; text-decoration: none; font-weight: bold;">
+                Bratz News</a>
             <img src="/KylieBratz.5cbbe8d4.png" alt="Bratz News Icon">
         </div>
         <div id="draggable-container">
@@ -245,7 +295,7 @@
         <!-- Add more icons as needed -->
 
         <!-- Change Background Button -->
-        <button id="change-bg-button">Change Background</button>
+        <button id="cd-button" class="cd-button">Change Background</button>
 
         <div id="footer">
           
