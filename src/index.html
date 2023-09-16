@@ -168,6 +168,7 @@
         .dropdown {
             float: left;
             overflow: hidden;
+            padding: 10px 10px;
         }
 
         .dropdown-content {
@@ -257,8 +258,16 @@
         </header>
      
         <div id="menu-bar">
-            <div class="menu-item">File</div>
-            <div class="menu-item">Edit</div>
+            <div class="dropdown">File
+                <ul class="dropdown-content">
+                    <li><a href="">Save As</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">Edit
+                <ul class="dropdown-content">
+                    <li><a href="">Make Post</a></li>
+                </ul>
+            </div>
             <div class="dropdown">View
                 <ul class="dropdown-content">
                     <li><a href="">Dear Chloe</a></li>
@@ -294,10 +303,6 @@
         </div>
     
         <!-- Add more icons as needed -->
-
-        <!-- Change Background Button -->
-        <button id="cd-button" class="cd-button">Change Background</button>
-
         <div id="footer">
           
         </div>
