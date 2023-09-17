@@ -61,14 +61,6 @@ header {
 }
 /* ... (remaining CSS code) ... */
 
-
-#draggable-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 100%;
-}
-
 .circle {
   border-radius: 50%;
   width: 150px;
@@ -79,6 +71,20 @@ header {
   color: #000;
   text-align: center;
   background-color: #c89f4d;
+}
+
+.article {
+  color: #fff;
+  text-align: left;
+  padding: 30px 30px;
+  text-align: center;
+  padding: 40px; /* Add padding to create space around the text */
+  background-color: #cf087c; /* Bratz Pink background for the section */
+  color: #FFF; /* White text color */
+  border-radius: 10px;
+  max-width: 75%;
+  width: 100%;
+  
 }
 
 .bratzHeader {
@@ -101,6 +107,14 @@ header {
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow */
 }
+
+#draggable-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+
 
 .close-button {
   position: absolute;
