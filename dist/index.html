@@ -5,14 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bratz Magazine</title>
     <style>body {
-            background-color: #725f6a; /* Bratz Pink */
+            background-color: #402b94; /* Bratz Pink */
             font-family: Arial, sans-serif;
             margin: 0;
             overflow: hidden;
-            overflow-y: auto; /* Enable vertical scrolling */
+            overflow-y: auto; /* Enable verƒtical scrolling */
             text-align: right;
             padding: 20px;
             height: 100vh;
+        }
+
+        #desktop {
+            background-color: #402b94; /* Purple */
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 20px;
+            border-radius: 20;
         }
 
         header {
@@ -31,7 +43,7 @@
         #welcome-section {
             text-align: center;
             padding: 40px; /* Add padding to create space around the text */
-            background-color: #725f6a; /* Bratz Pink background for the section */
+            background-color: #cf087c; /* Bratz Pink background for the section */
             color: #FFF; /* White text color */
             border-radius: 10px;
             max-width: 75%;
@@ -63,10 +75,31 @@
             height: 100%;
         }
 
+        .circle {
+            border-radius: 50%;
+            width: 150px;
+            height: 100px;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #a4874c;
+            color: #000;
+            text-align: center;
+            background-color: #c89f4d;
+        }
+
+        .bratzHeader {
+            font-family: 'BratzFont', Arial, sans-serif; /* Thinking of using a custom font, otherwise I'm going to fallback on Arial or sans-serif */
+            font-size: 40px; 
+            color: purple; 
+            text-transform: uppercase; /* Making the text uppercase like the logo */
+            letter-spacing: 3px; /* May increase letter spacing for a more stylized look */
+            text-shadow: 2px 2px 4px rgba(210, 213, 122, 0.955); /* Addint a subtle text shadow for depth */         
+        }
+
         .draggable {
             width: 300px;
             height: 200px;
-            background-color: #8A2BE2; /* Purple background */
+            background-color: #02f503; /* Purple background */
             color: #FFF; /* White text color */
             text-align: center;
             cursor: grab; /* Change cursor type */
@@ -134,29 +167,6 @@
             margin-top: 10px;
             font-size: 18px;
         }
-        
-
-        #desktop {
-            background-color: #725f6a; /* Purple */
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding-top: 20px;
-            border-radius: 20;
-
-        }
-
-        nav {
-          -webkit-flex: 1;
-          -ms-flex: 1;
-          flex: 1;
-          background: purple;
-          padding: 20px;
-          overflow: hidden;
-        }
 
         .menu-item {
             color: #FFF;
@@ -173,7 +183,7 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #7d7c81;
+            background-color: #0387b1;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
@@ -208,7 +218,7 @@
 
         #menu-bar {
             width: 80%;
-            background-color: #7d7c81;
+            background-color: #0387b1;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -251,7 +261,9 @@
     <div id="desktop">
         <header>
             <div class="header-content">
-                <h1>Bratz</h1>
+                <div class="circle">
+                    <h1 class="bratzHeader">Bratz</h1>
+                </div>
             </div>
         </header>
      
