@@ -24,7 +24,7 @@
             </div>
             <div class="dropdown">Edit
                 <ul class="dropdown-content">
-                    <li><a href="">Make Post</a></li>
+                    <li><a onClick="myFunction()">Make Post</a></li>
                 </ul>
             </div>
             <div class="dropdown">View
@@ -66,7 +66,10 @@
           
         </div>
     </div>
-    <script>var draggableBlock = document.getElementById('draggable-block');
+    <script>function myFunction() {
+  alert('Hello');
+}
+var draggableBlock = document.getElementById('draggable-block');
 var closeButton = document.getElementById('close-button');
 var isDragging = false;
 var offsetX, offsetY;
