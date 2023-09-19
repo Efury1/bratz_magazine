@@ -24,7 +24,9 @@
             </div>
             <div class="dropdown">Edit
                 <ul class="dropdown-content">
-                    <li><a onClick="myFunction()">Make Post</a></li>
+                    <li><a class="popup" onClick="myFunction()">Make Post
+                        <span class="popuptext" id="myPopup">A simple Popup</span>
+                    </a></li>
                 </ul>
             </div>
             <div class="dropdown">View
@@ -69,9 +71,10 @@
     <script>
 
         function myFunction() {
-            alert('Hello');
+           let popup = document.getElementById("myPopup");
+           popup.classList.toggle("show");
         }
-        
+
         const draggableBlock = document.getElementById('draggable-block');
         const closeButton = document.getElementById('close-button');
 
