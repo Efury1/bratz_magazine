@@ -443,4 +443,28 @@ input[type=text], select, textarea {
   line-height: 1.6;
 }
 
+.cd-button {
+  background-color: #fff; /* White content background */
+  padding: 20px;
+}
+
+/* Read Me Page Styling */
+#readme-content {
+  background-color: #fff; /* White content background */
+  padding: 20px;
+  text-align: center;
+}
+
+#readme-content h2 {
+  font-size: 28px; /* Larger font size */
+  color: #0066cc; /* Blue title */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#readme-content p {
+  line-height: 1.6;
+  text-align: center;
+}
+
 /*# sourceMappingURL=/style.e308ff8e.css.map */

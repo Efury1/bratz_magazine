@@ -443,10 +443,16 @@ input[type=text], select, textarea {
   line-height: 1.6;
 }
 
+.cd-button {
+  background-color: #fff; /* White content background */
+  padding: 20px;
+}
+
 /* Read Me Page Styling */
 #readme-content {
   background-color: #fff; /* White content background */
   padding: 20px;
+  text-align: center;
 }
 
 #readme-content h2 {
@@ -458,4 +464,5 @@ input[type=text], select, textarea {
 
 #readme-content p {
   line-height: 1.6;
+  text-align: center;
 }
