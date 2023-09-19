@@ -316,9 +316,8 @@ header {
 }
 
 
-
 input[type=text], select, textarea {
-  width: 10%;
+  width: 80%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
