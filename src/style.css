@@ -442,3 +442,20 @@ input[type=text], select, textarea {
   margin: 10px 0;
   line-height: 1.6;
 }
+
+/* Read Me Page Styling */
+#readme-content {
+  background-color: #fff; /* White content background */
+  padding: 20px;
+}
+
+#readme-content h2 {
+  font-size: 28px; /* Larger font size */
+  color: #0066cc; /* Blue title */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#readme-content p {
+  line-height: 1.6;
+}
