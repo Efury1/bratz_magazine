@@ -374,4 +374,73 @@ input[type=text], select, textarea {
   text-align: center;
 }
 
+/* Music Spotlight Page Styling */
+#music-spotlight {
+  background-color: #fff; /* White content background */
+  padding: 20px;
+  text-align: center;
+}
+
+#music-spotlight h2 {
+  font-size: 32px; /* Larger font size */
+  color: #ff69b4; /* Pink title */
+  text-align: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.artist-card {
+  background-color: #f5f5f5; /* Light gray background */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+}
+
+.artist-card h3 {
+  font-size: 24px; /* Larger font size for artist names */
+  color: #ff69b4; /* Pink artist name */
+  margin-top: 0;
+  text-align: center;
+}
+
+.artist-card p {
+  margin: 10px 0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Lifestyle Page Styling */
+#lifestyle-content {
+  background-color: #fff; /* White content background */
+  padding: 20px;
+}
+
+#lifestyle-content h2 {
+  font-size: 32px; /* Larger font size */
+  color: #ff9900; /* Orange title */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.article {
+  background-color: #f1eded; /* Light gray background */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.article h3 {
+  font-size: 24px; /* Larger font size for article headings */
+  color: #ff9900; /* Orange heading */
+  margin-top: 0;
+}
+
+.article p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
 /*# sourceMappingURL=/style.e308ff8e.css.map */
