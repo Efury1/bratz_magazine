@@ -296,14 +296,26 @@ header {
   top: 40px;
   left: 50%;
   margin-left: -80px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.popup-input {
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #6a1414;
+  border-radius: 3px;
+}
 /* Toggle this class - hide and show the popup */
 .popup .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
 }
+
+
 
 input[type=text], select, textarea {
   width: 10%;
@@ -464,5 +476,5 @@ input[type=text], select, textarea {
 
 #readme-content p {
   line-height: 1.6;
-  text-align: center;
+  
 }
